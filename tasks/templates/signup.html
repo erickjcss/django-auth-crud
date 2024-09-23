@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Signup</h1>
+<!-- <h1>{{form}}</h1> -->
+{{error}}
+
+<form  method="POST">
+    {% csrf_token %}<!-- asegura q el formulario es creado por nuestro servidor -->
+    {{form.as_p}}
+<button>
+    Signup
+</button>
+</form>
+
+{% endblock %}

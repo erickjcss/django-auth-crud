@@ -84,13 +84,15 @@ WSGI_APPLICATION = 'djangocrud.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
- 
-        'default':dj_database_url.config(
-            default='postgresql://postgres:postgres@localhost/postgres',
-            conn_max_age=600
-        )
-}
-
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'djangocrud_w3fl',
+        'USER': 'djangocrud_w3fl_user',
+        'PASSWORD': '8IgVlHnu5TQLSPE0APBTsFQ8WUgp7coo',
+        'HOST': 'dpg-crots3t2ng1s73aki9p0-a.oregon-postgres.render.com',
+        'PORT': '5432',
+    
+    }}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
